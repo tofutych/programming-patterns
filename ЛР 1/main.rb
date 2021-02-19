@@ -1,6 +1,6 @@
-# puts "Hello world" # the most loneliest day of my life
+puts "Hello world" # the most loneliest day of my life
 
-# puts "Привет, #{ARGV[0]}!"
+puts "Привет, #{ARGV[0]}!"
 
 puts "#{ARGV[0]}, какой у вас любимый язык?"
 answer = STDIN.gets.chomp
