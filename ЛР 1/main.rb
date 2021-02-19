@@ -4,13 +4,14 @@
 
 puts "#{ARGV[0]}, какой у вас любимый язык?"
 answer = STDIN.gets.chomp
+
 case answer
 when "Ruby"
-    puts "Подлиза"
+  puts "Подлиза"
 when "Python"
-    puts "Хватит душить змея... Скоро будет Ruby"
+  puts "Хватит душить змея... Скоро будет Ruby"
 when "C++" 
-    puts "Подлечись, ведь скоро им станет Ruby"
+  puts "Подлечись, ведь скоро им станет Ruby"
 else
-    puts "Скоро будет Ruby"
+  puts "Скоро будет Ruby"
 end
