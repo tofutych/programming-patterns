@@ -11,4 +11,4 @@ def method_2(num)
     if max_digit == -1 then return "Такой цифры нет" else return max_digit end
 end
 
-puts method_2("36901234598")
+puts method_2("3690123456789")
