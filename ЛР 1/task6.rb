@@ -17,18 +17,30 @@ end
 
 
 def min_digit(num)
-    num.to_s.split("").min
+    min = num[0].to_i
+    num.each_char do |char|
+        if min > char.to_i
+            min = char.to_i
+        end
+    end
+    min
 end
 
 
 def max_digit(num)
-    num.to_s.split("").max
+    max = num[0].to_i
+    num.each_char do |char|
+        if max < char.to_i
+            max = char.to_i
+        end
+    end
+    max
 end
 
 
 num = ARGV[0]
 
-sum(ARGV[0])
-product(ARGV[0])
-min_digit(ARGV[0])
-max_digit(ARGV[0])
+puts sum(num)
+puts product(num)
+puts min_digit(num)
+puts max_digit(num)
