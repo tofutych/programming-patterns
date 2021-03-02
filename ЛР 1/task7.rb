@@ -75,5 +75,5 @@ def method_3(num)
     puts max_num * sum
 end
 
-method_3(123)  # -> 245
-method_3(725)  # -> 245
+method_3(123)  # -> 246
+method_3(725)  # -> 58
