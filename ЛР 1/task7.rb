@@ -6,7 +6,8 @@ def method_1(num)
             acc = 0
             for j in 2..i
                 if num % j == 0 && i % j == 0
-                    acc += 1
+                    counter += 1
+                    break
                 end
             end
             if acc != 0
@@ -34,8 +35,8 @@ def method_2(num)
     if max_digit == -1 then return "Такой цифры нет" else return max_digit end
 end
 
-puts method_2("123")  # -> 2
-puts method_2("987654321")  # -> 8
+# puts method_2("123")  # -> 2
+# puts method_2("987654321")  # -> 8
 
 
 
