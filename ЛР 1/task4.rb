@@ -1,5 +1,7 @@
 print "Введите команду ОС: "
 os_command = STDIN.gets.chomp
+system(os_command)
+
 print "Введите команду Ruby: "
 ruby_command = STDIN.gets.chomp
-puts system(os_command)
+system("ruby -e \"#{ruby_command}\"")
