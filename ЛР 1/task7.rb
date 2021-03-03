@@ -43,7 +43,6 @@ puts method_2("123")  # -> 2
 puts method_2("987654321")  # -> 8
 
 
-
 def method_3(num)
     num = num.to_i
     sum = 0
@@ -57,11 +56,10 @@ def method_3(num)
         end
     end
 
-    (num - 1).downto(2) do |i|
+    for i in 2..(num - 1)
         for j in 2..i
             if num % j == 0 && i % j == 0 && i % smallest_divisor != 0
                 max_num = i
-                break
             end
         end
     end
@@ -72,8 +70,9 @@ def method_3(num)
         end
         num /= 10
     end
-    puts max_num * sum
+
+    return  max_num * sum
 end
 
-method_3(123)  # -> 246
-method_3(725)  # -> 58
+method_3(123)  # -> 492
+method_3(725)  # -> 1392
