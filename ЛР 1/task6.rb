@@ -114,7 +114,7 @@ def method_2(num)
 end
 
 
-puts method_2("123")  # -> 2
+puts method_2("123")        # -> 2
 puts method_2("987654321")  # -> 8
 
 
@@ -135,7 +135,7 @@ puts method_3("725")  # -> 1392
 num = ARGV[0]  # ruby task6.rb 123
 
 
-puts sum(num)  # -> 6
-puts product(num)  # -> 6
+puts sum(num)        # -> 6
+puts product(num)    # -> 6
 puts min_digit(num)  # -> 1
 puts max_digit(num)  # -> 3
