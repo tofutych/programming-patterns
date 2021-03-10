@@ -127,6 +127,11 @@ def method_3(num)
 end
 
 
+def problem_20(num = 100)
+    return sum((1..num).inject(:*).to_s)
+end
+
+
 def selector()
     for argv in ARGV
         case argv
@@ -182,6 +187,11 @@ def selector()
             num = STDIN.gets.chomp
             puts "\tРезультат: #{method_3(num)}".blue
             puts
+        when "11"
+            print "Вы выбрали problem_20(num = 100)"
+            puts
+            puts "\tРезультат: #{problem_20()}".blue
+            puts
         when "-h"
             h()
         else
@@ -203,8 +213,10 @@ def h()
     puts "\t6.  get_smallest_divisor(num) — минимальный делитель числа num"
     puts "\t7.  sum_of_digits_less_than_5(num) — сумма чисел числа, которые меньше 5"
     puts "\t8.  method1(num) — Количество четных чисел, не взаимно простых с числом num".blue  # 35 - > 5, 10 -> 4
-    puts "\t9.  method2(num) — Максимальная цифру числа num, не делящуюся на 3.".blue  # 123 -> 2, 987654321 -> 3
-    puts "\t10. method3(num) — Поизведение максимального числа, не взаимно простого с num, не делящегося на наименьший делитель исходного числа num, и суммы цифр числа num, меньших 5.\n".blue  # 123 -> 492, 725 -> 1392
+    puts "\t9.  method2(num) — Максимальная цифру числа num, не делящуюся на 3".blue  # 123 -> 2, 987654321 -> 3
+    puts "\t10. method3(num) — Поизведение максимального числа, не взаимно простого с num, не делящегося на наименьший делитель исходного числа num, и суммы цифр числа num, меньших 5".blue  # 123 -> 492, 725 -> 1392
+    puts "\t11. problem_20(num = 100) — Сумма цифр факториала".yellow  # 123 -> 492, 725 -> 1392
+    puts
 end
 
 
