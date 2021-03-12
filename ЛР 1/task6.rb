@@ -132,6 +132,12 @@ def problem_20(num = 100)
 end
 
 
+def problem_40()
+    d = (0 .. 200_000).to_a.join
+    return [d[1], d[10], d[100], d[1_000], d[10_000], d[100_000], d[1000_000]].map(&:to_i).inject(:*)
+end
+
+
 def selector()
     for argv in ARGV
         case argv
@@ -188,14 +194,19 @@ def selector()
             puts "\tРезультат: #{method_3(num)}".blue
             puts
         when "11"
-            print "Вы выбрали problem_20(num = 100)"
+            print "Вы выбрали problem_20()"
             puts
             puts "\tРезультат: #{problem_20()}".blue
+            puts
+        when "12"
+            print "Вы выбрали problem_40()"
+            puts
+            puts "\tРезультат: #{problem_40()}".blue
             puts
         when "-h"
             h()
         else
-            puts "Такого метода нет.".red
+            puts "Такой функции нет.".red
             puts
             h()
         end
@@ -204,7 +215,7 @@ end
 
 
 def h()
-    puts "Всего доступно 10 методов.\nЧтобы вызвать какой-либо из них, в параметрах запуска укажите " + "номер метода и необходимые значения.\n".red
+    puts "Всего доступно 12 функций.\nЧтобы вызвать какую-либо из них, в параметрах запуска укажите " + "номер функции и необходимые значения.\n".red
     puts "\t1.  sum(num) — сумма цифр числа num"
     puts "\t2.  product(num) — произведение цифр числа num"
     puts "\t3.  min_digit(num) — минимальная цифра числа num"
@@ -215,7 +226,8 @@ def h()
     puts "\t8.  method1(num) — Количество четных чисел, не взаимно простых с числом num".blue  # 35 - > 5, 10 -> 4
     puts "\t9.  method2(num) — Максимальная цифру числа num, не делящуюся на 3".blue  # 123 -> 2, 987654321 -> 3
     puts "\t10. method3(num) — Поизведение максимального числа, не взаимно простого с num, не делящегося на наименьший делитель исходного числа num, и суммы цифр числа num, меньших 5".blue  # 123 -> 492, 725 -> 1392
-    puts "\t11. problem_20(num = 100) — Сумма цифр факториала".yellow  # 123 -> 492, 725 -> 1392
+    puts "\t11. problem_20() — Сумма цифр 100!".yellow
+    puts "\t12. problem_40() — Постоянная Чемперноуна".yellow
     puts
 end
 
