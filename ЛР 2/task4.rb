@@ -1,0 +1,1 @@
+print File.read("4.txt").split().map(&:to_i)
