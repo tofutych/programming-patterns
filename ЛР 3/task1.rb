@@ -23,5 +23,3 @@ class Employee
 end
 
 Ahmed = Employee.new("Ahmedov Ahmed Ahmedovich", 1919, "89188822882", "Rai", "qwe@qwe.xd", "03 03 030 303", "Loh", 0, "Google", "LOH", "123 rublya v god")
-
-puts Ahmed
