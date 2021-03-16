@@ -51,6 +51,7 @@ def h()
     puts
 end
 
+
 def selector()
     if ARGV[0] == "1" && ARGV.size == 2
         puts "Вы ввели #{input()}"
