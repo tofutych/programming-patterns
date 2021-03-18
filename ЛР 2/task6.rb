@@ -9,6 +9,24 @@ def from_kb()
 end
 
 
+def way_selector()
+    puts "Выберите способа задания массива"
+    puts "\t1. С клавиатуры"
+    puts "\t2. С файла"
+    way = STDIN.gets.chomp
+
+    if way == "1"
+        print "Введите элементы массива: "
+        arr = from_kb()
+    elsif way == "2"
+        print "Введите путь до файла с массивом: "
+        arr = from_file(STDIN.gets.chomp)
+    end
+
+    return arr
+end
+
+
 def task10(arr1, arr2)
     counter = 0
 
@@ -24,7 +42,7 @@ def task10(arr1, arr2)
 end
 
 
-def task22()
+def task22(arr, a, b)
 
 
 end
@@ -79,6 +97,7 @@ def main()
         task10(arr1, arr2)
 
     when "2"
+        arr = way_selector()
 
     when "3"
 
@@ -89,4 +108,4 @@ def main()
     end
 end
 
-puts main()
+main()
