@@ -4,8 +4,7 @@ end
 
 
 def from_kb()
-    arr = STDIN.gets.chomp
-    return arr.split().map(&:to_i)
+    return STDIN.gets.chomp.split().map(&:to_i)
 end
 
 
@@ -43,8 +42,22 @@ end
 
 
 def task22(arr, a, b)
+    min = arr[a + 1]
+    counter = 0
 
+    for i in (a + 1)...b
+        if min > arr[i] 
+            min = arr[i]
+        end
+    end
 
+    for i in (a + 1)...b
+        if arr[i] == min
+            counter += 1
+        end
+    end
+
+    return counter
 end
 
 
@@ -94,10 +107,12 @@ def main()
             arr2 = from_file(STDIN.gets.chomp)
         end
 
-        task10(arr1, arr2)
-
+        return task10(arr1, arr2)
     when "2"
         arr = way_selector()
+        print "Введите (a, b) через пробел: "
+        a, b = STDIN.gets.chomp.split.map(&:to_i)
+        return task22(arr, a, b)
 
     when "3"
 
@@ -108,4 +123,4 @@ def main()
     end
 end
 
-main()
+puts main()
