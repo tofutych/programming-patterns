@@ -81,7 +81,7 @@ end
 def task46(arr)
     result = Array.new
 
-    for i in 0..arr.size
+    for i in 0...arr.size
         if arr[i] > 0
             result.insert(0, arr[i])
         elsif arr[i] < 0
