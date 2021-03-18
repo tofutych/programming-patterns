@@ -61,15 +61,35 @@ def task22(arr, a, b)
 end
 
 
-def task34()
+def task34(arr, a, b)
+    section = (a..b).to_a
+    result = Array.new
 
+    for i in 0...arr.size
+        for j in 0...section.size
+            if arr[i] == section[j]
+                result.push(arr[i])
+                break
+            end
+        end
+    end
 
+    return result
 end
 
 
-def task46()
+def task46(arr)
+    result = Array.new
 
+    for i in 0..arr.size
+        if arr[i] > 0
+            result.insert(0, arr[i])
+        elsif arr[i] < 0
+            result.push(arr[i])
+        end
+    end
 
+    return result
 end
 
 
@@ -106,18 +126,20 @@ def main()
             print "Введите путь до файла с вторым массивом: "
             arr2 = from_file(STDIN.gets.chomp)
         end
-
         return task10(arr1, arr2)
     when "2"
         arr = way_selector()
         print "Введите (a, b) через пробел: "
         a, b = STDIN.gets.chomp.split.map(&:to_i)
         return task22(arr, a, b)
-
     when "3"
-
+        arr = way_selector()
+        print "Введите [a, b] через пробел: "
+        a, b = STDIN.gets.chomp.split.map(&:to_i)
+        return task34(arr, a, b)
     when "4"
-
+        arr = way_selector()
+        return task46(arr)
     when "5"
 
     end
