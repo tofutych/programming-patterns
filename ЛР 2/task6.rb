@@ -30,6 +30,24 @@ def task22()
 end
 
 
+def task34()
+
+
+end
+
+
+def task46()
+
+
+end
+
+
+def task58()
+
+
+end
+
+
 def main()
     puts "Выберите задачу:"
     puts "\t1. 6.10"
