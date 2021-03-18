@@ -32,11 +32,11 @@ end
 
 def main()
     puts "Выберите задачу:"
-    puts "\t1. "
-    puts "\t2. "
-    puts "\t3. "
-    puts "\t4. "
-    puts "\t5. "
+    puts "\t1. 6.10"
+    puts "\t2. 6.22"
+    puts "\t3. 6.34"
+    puts "\t4. 6.46"
+    puts "\t5. 6.58"
     answer = STDIN.gets.chomp
 
     case answer
