@@ -4,4 +4,4 @@ def task12(path)
 end
 
 
-print task12("task12.txt")  # ["qwerty", "qwert", "qwer", "qwe", "qw", "q"]  ——>  ["q", "qw", "qwe", "qwer", "qwert", "qwerty"]
+print task12("task12.txt")  # ["qwe qwe qwe", "qweeeeeeee", "qw qw"]  ——>  ["qw qw", "qweeeeeeee", "qwe qwe qwe"]
