@@ -161,6 +161,8 @@ def main()
     when "5"
         arr = way_selector()
         return task58(arr)
+    else
+        return "Чето не то выбрал, друг."
     end
 end
 
