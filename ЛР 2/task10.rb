@@ -14,7 +14,6 @@ end
 
 
 def task15(str)
-    
+    return str.scan(/\d+/).map(&:to_i).select{|n| n > 5}.size
 end
 
-puts task11("123qweQWE321")
