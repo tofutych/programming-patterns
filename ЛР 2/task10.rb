@@ -3,3 +3,8 @@ def extract_date(str)
 end
 
 
+def task4(str)
+    return str.scan(/\d+/).map(&:to_i).select{|n| n < 5}.size
+end
+
+print(task4("q1w2e3r4t5y6u0"))
