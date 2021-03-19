@@ -7,4 +7,14 @@ def task4(str)
     return str.scan(/\d+/).map(&:to_i).select{|n| n < 5}.size
 end
 
-print(task4("q1w2e3r4t5y6u0"))
+
+def task11(str)
+    return "Незадействованы все кроме #{str.scan(%r"[0-9A-Za-z]").uniq}"
+end
+
+
+def task15(str)
+    
+end
+
+puts task11("123qweQWE321")
