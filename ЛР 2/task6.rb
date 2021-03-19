@@ -112,7 +112,8 @@ def task58(arr)
             counter += 1
         end
     end
-    puts counter
+
+    return  counter
 end
 
 
