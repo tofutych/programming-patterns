@@ -93,9 +93,26 @@ def task46(arr)
 end
 
 
-def task58()
+def task58(arr)
+    counter = 0
 
-
+    for i in 0...arr.size
+        flag = true
+        temp_arr = Array.new(arr)
+        temp_arr.delete_at(i)
+        for j in 0...temp_arr.size
+            for k in (j + 1)...temp_arr.size
+                if temp_arr[j] + temp_arr[k] != arr[i]
+                    flag = false
+                end
+            end
+        end
+        if flag
+            puts arr[i]
+            counter += 1
+        end
+    end
+    puts counter
 end
 
 
@@ -141,7 +158,8 @@ def main()
         arr = way_selector()
         return task46(arr)
     when "5"
-
+        arr = way_selector()
+        return task58(arr)
     end
 end
 
