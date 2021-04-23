@@ -20,6 +20,16 @@ class Employee
             self.prev_salary= prev_salary
         end
     end
+
+    def to_s
+        s = ""
+        self.instance_variables.each do |var|
+            s +=  "#{var.to_s.delete("@").capitalize}: #{self.instance_variable_get(var).inspect}\n"
+        end
+        s
+    end
 end
 
-Ahmed = Employee.new("Ahmedov Ahmed Ahmedovich", 1919, "89188822882", "Rai", "qwe@qwe.xd", "03 03 030 303", "Loh", 0, "Google", "LOH", "123 rublya v god")
+
+emp = Employee.new('Ivanov Ivan Ivanovic', '2000', '89186824834', 'Moscow', 'ivanov@ivan.ru', '12 34 567890', 'Uborshik', 1, 'Yandex', 'Vodonos', '40 griven')
+puts emp
