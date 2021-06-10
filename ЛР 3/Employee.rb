@@ -28,4 +28,11 @@ class Employee
         end
         s
     end
+
+    def self.is_russian_phone_number?(phone)
+        if phone.match /^((\+7|7|8)+([0-9]){10})$/ == nil
+            false
+        end
+        true
+    end
 end
