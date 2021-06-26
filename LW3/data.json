@@ -1,0 +1,67 @@
+[
+  {
+    "fio": "Мартиросов Давид Вадимович",
+    "bday_year": "2001",
+    "phone_number": "7-918-6824834",
+    "address": "Краснодар",
+    "email": "martirosov.davidka@mail.ru",
+    "passport": "0315312820",
+    "speciality": "Programmer",
+    "work_exp": "0",
+    "prev_wp": "",
+    "prev_speciality": "",
+    "prev_salary": ""
+  },
+  {
+    "fio": "Кушнир Роман Сергеевич",
+    "bday_year": "1999",
+    "phone_number": "7-918-6824834",
+    "address": "Краснодар",
+    "email": "testing@test.com",
+    "passport": "0102820123",
+    "speciality": "Programmer",
+    "work_exp": "0",
+    "prev_wp": "",
+    "prev_speciality": "",
+    "prev_salary": ""
+  },
+  {
+    "fio": "Иванов Иван Иванович",
+    "bday_year": "2010",
+    "phone_number": "7-918-1882837",
+    "address": "Москва",
+    "email": "ivanov@ivan.ivanovich",
+    "passport": "123456789",
+    "speciality": "Waiter",
+    "work_exp": "0",
+    "prev_wp": "",
+    "prev_speciality": "",
+    "prev_salary": ""
+  },
+  {
+    "fio": "Кушнир Роман Сергеевич",
+    "bday_year": "1999",
+    "phone_number": "7-918-6824834",
+    "address": "Краснодар",
+    "email": "testing@test.com",
+    "passport": "0102820123",
+    "speciality": "Programmer",
+    "work_exp": "0",
+    "prev_wp": "",
+    "prev_speciality": "",
+    "prev_salary": ""
+  },
+  {
+    "fio": "Иванов Иван Иванович",
+    "bday_year": "2010",
+    "phone_number": "7-918-1882837",
+    "address": "Москва",
+    "email": "ivanov@ivan.ivanovich",
+    "passport": "123456789",
+    "speciality": "Waiter",
+    "work_exp": "0",
+    "prev_wp": "",
+    "prev_speciality": "",
+    "prev_salary": ""
+  }
+]
