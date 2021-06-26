@@ -1,10 +1,10 @@
-class TestEmployee
+class Employee
     attr_accessor :fio, :bday_year, :phone_number, :address, :email, :passport, :speciality, :work_exp, :prev_wp, :prev_speciality, :prev_salary
 
     def initialize(fio, bday_year, phone_number, address, email, passport, speciality, work_exp, prev_wp = nil, prev_speciality = nil, prev_salary = nil)
         self.fio= fio
         self.bday_year= bday_year
-        self.phone_number= TestEmployee.correct_phone_number(phone_number)
+        self.phone_number= Employee.correct_phone_number(phone_number)
         self.address= address
         self.email= email
         self.passport= passport
@@ -33,6 +33,14 @@ class TestEmployee
         s
     end
 
+    def to_hash
+        h = Hash.new
+        self.instance_variables.each do |var|
+            h["#{var.to_s.delete("@")}"] = "#{self.instance_variable_get(var)}"
+        end
+        return h
+    end
+
     def self.is_ru_phone_number?(phone)
         if (/^((\+7|7|8)+([0-9]){10})$/).match(phone) == nil
             return false
@@ -49,5 +57,4 @@ class TestEmployee
             raise ArgumentError ,"Invalid phone number."
         end
     end
-
 end
